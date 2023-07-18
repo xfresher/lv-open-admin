@@ -168,6 +168,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+
+        Kevinduy\Backend\BackendServiceProvider::class,
     ])->toArray(),
 
     /*
@@ -182,6 +184,7 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
+        'Backend' => Kevinduy\Backend\Facades\Backend::class,
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 
