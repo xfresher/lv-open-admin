@@ -7,38 +7,38 @@ use Kevinduy\Backend\Builder\Layout\Content;
 
 class BackendController extends Controller
 {
-    public function index()
-    {
+    // public function index()
+    // {
 
-    }
+    // }
 
-    public function show($id)
-    {
+    // public function show($id)
+    // {
 
-    }
+    // }
 
-    public function create(Content $content)
-    {
+    // public function create(Content $content)
+    // {
 
-    }
+    // }
 
-    public function store()
-    {
+    // public function store()
+    // {
 
-    }
+    // }
 
-    public function edit($id)
-    {
+    // public function edit($id)
+    // {
 
-    }
+    // }
 
-    public function update($id)
-    {
+    // public function update($id)
+    // {
 
-    }
+    // }
 
-    public function destroy($id)
-    {
+    // public function destroy($id)
+    // {
 
-    }
+    // }
 }

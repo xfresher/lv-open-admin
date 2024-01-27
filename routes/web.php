@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MediaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('medias.index');
 });
+
+Route::group([
+    'prefix' => 'medias',
+    'as' => 'medias.',
+], function () {
+    Route::get('/', [MediaController::class, 'index'])->name('index');
+    Route::get('/{media}', [MediaController::class, 'show'])->name('show');
+});
+

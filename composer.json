@@ -26,7 +26,8 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
-            "Kevinduy\\Backend\\": "packages/kevinduy/backend/src/"
+            "Kevinduy\\Backend\\": "packages/kevinduy/backend/src/",
+            "Modules\\": "src/Modules/"
         },
         "files": [
             "packages/kevinduy/backend/src/helpers.php"

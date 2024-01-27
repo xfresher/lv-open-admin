@@ -4,7 +4,8 @@ namespace Kevinduy\Backend\Builder\Layout;
 
 use Illuminate\Contracts\Support\Renderable;
 
-class Row implements Renderable
+// class Row implements Renderable
+class Row
 {
     protected $columns = [];
 
@@ -29,27 +30,25 @@ class Row implements Renderable
 
     public function build()
     {
-        $output = '<div class="row">';
+        echo '<div class="row">';
 
         foreach ($this->columns as $column) {
-            $output .= $column->build();
+            echo $column->build();
         }
 
-        $output .= '</div>';
-
-        echo $output;
+        echo '</div>';
     }
 
-    public function render()
-    {
-        ob_start();
+    // public function render()
+    // {
+    //     ob_start();
 
-        $this->build();
+    //     $this->build();
 
-        $contents = ob_get_contents();
+    //     $contents = ob_get_contents();
 
-        ob_end_clean();
+    //     ob_end_clean();
 
-        return $contents;
-    }
+    //     return $contents;
+    // }
 }

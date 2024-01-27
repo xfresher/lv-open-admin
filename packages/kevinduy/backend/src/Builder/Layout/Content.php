@@ -31,12 +31,27 @@ class Content implements Renderable
         $this->rows[] = $row;
     }
 
+    public function build()
+    {
+        ob_start();
+
+        foreach ($this->rows as $row) {
+            $row->build();
+        }
+
+        $contents = ob_get_contents();
+
+        ob_end_clean();
+
+        return $contents;
+    }
+
     public function render()
     {
         $compact = [
-
+            '_content_'   => $this->build(),
         ];
 
-        return view('layouts.backend', $compact);
+        return view('layouts.backend', $compact)->render();
     }
 }

@@ -38,6 +38,6 @@ class Column
         $output .= '</div>';
         $output .= '</div>';
 
-        echo $output;
+        return $output;
     }
 }
